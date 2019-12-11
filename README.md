@@ -13,6 +13,8 @@ $ grep exec * -R
 ### VSFTPd
 
 ## OpenSSH
+* sudo apt-get install openssh-server openssh-client
+
 * etc/ssh/sshd_config
 * Deny root login
 	* etc/ssh/sshd_config
@@ -20,8 +22,6 @@ $ grep exec * -R
 * Limit user login
 	* /etc/ssh/sshd_config
 	* AllowUsers (username)
-* Disable Protocol 1
-	* Protocol 2
 * User public/private keys for auth
 	* put pubkey in ~/.ssh/authorized_keys
 	* PasswordAuthentication no
@@ -42,6 +42,7 @@ $ grep exec * -R
 
 ## MySQL and MongoDB
 #### Installation
+* sudo apt-get install mysql-server
 * sudo mysql_secure_installation
 #### Commands
 #### Reset MySQL Root Password
