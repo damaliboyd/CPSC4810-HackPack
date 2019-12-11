@@ -34,12 +34,14 @@ $ grep exec * -R
 	* /etc/init.d/apache2 [restart | stop | start]
 * To restric directory browsing
 	*/etc/apache2/apache2.conf
-	* ``` <Directory />
-  ​Order Deny,Allow
-​  Deny from all
-​  Options None
-​  AllowOverride None
-​</Directory>```
+ ``` 
+<Directory />
+Order Deny,Allow
+Deny from all
+Options None
+AllowOverride None
+</Directory> 
+```
  ### Nginx
  * /etc/nginx/nginx.conf
 * Audit the server
