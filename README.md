@@ -1,15 +1,15 @@
 # CPSC4810-HackPack
 ## 30 Minute Check List
 * Change the root password.
-	* $ passwd root
+	* $ `passwd root`
 * Check /etc/passwd to see users. 
 	* $ cat /etc/passwd
 * Change passwords of other users with login.
-	* $ passwd username
+	* $ `passwd username
 * Delete unneeded users
-	* $ userdel usernmae
+	* $ `userdel usernmae
 * Check /etc/group and /etc/shadow.
-	* $ cat /etc/group and cat /etc/shadow
+	* $ `cat /etc/group and cat /etc/shadow
 * Check what's in the crontab and edit it.
 	* $ crontab -l
 	* $ crontab -e
@@ -87,7 +87,7 @@ AllowOverride None
 * sudo apt-get install mysql-server
 * sudo mysql_secure_installation
 * Restart, start, or stop mysql
-	* /etc/init.d/mysql [restart | stop | start]
+	* `/etc/init.d/mysql [restart | stop | start]`
 
 #### Reset MySQL Root Password
 * sudo /etc/init.d/mysql stop
@@ -98,7 +98,7 @@ AllowOverride None
 * UPDATE mysql.user SET Password=PASSWORD('newpwd') WHERE User='root';
 
 #### Create backup of MySQL Database
-15 2 * * * root mysqldump -u root -pPASSWORD --all-databases | gzip > /mnt/disk2/database_'data ' %m-%d-%y' ' .sql.gz
+* `mysqldump -u USER -p --all-databases > /mnt/backups/all_databases.sql`
 
 ### AD/DS
 
