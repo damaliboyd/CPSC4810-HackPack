@@ -51,6 +51,9 @@
 	* PasswordAuthentication no
 
 ### Apache
+#### Installation
+* sudo apt-get install apache2
+#### Config File
 * Configuration file is found in /etc/apache2/apache2.conf
 * Add "ServerTokens Prod" to remove version information
 * Add "ServerSignature Off" to change header
