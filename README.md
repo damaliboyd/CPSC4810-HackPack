@@ -36,8 +36,10 @@
 * sudo apt-get install vsftpd.
 #### Config File
 * Location is /etc/vsftpd.conf 
-Back up config file
+* Back up config file
 	* sudo mv -v /etc/vsftpd.conf /etc/vsftpd.conf.bk
+* Add following to config file to reduce ftp privileges
+	* nopriv_user=ftp
 ### OpenSSH
 #### Installation
 * sudo apt-get install openssh-server openssh-client
