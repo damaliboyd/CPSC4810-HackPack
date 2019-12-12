@@ -1,8 +1,32 @@
 # CPSC4810-HackPack
 ## 30 Minute Check List
-* Check Users and Groups. Remove any unneeded users and change passwords.
-* Check configurations of SSH, Web Server
-* 
+* Change the root password.
+	* $ passwd root
+* Check /etc/passwd to see users. 
+	* $ cat /etc/passwd
+* Change passwords of other users with login.
+	* $ passwd username
+* Delete unneeded users
+	* $ userdel usernmae
+* Check /etc/group and /etc/shadow.
+	* $ cat /etc/group and cat /etc/shadow
+* Check what's in the crontab and edit it.
+	* $ crontab -l
+	* $ crontab -e
+* Check /tmp for suspicious files.
+	* $ ls -la /tmp
+* Check people with sudo permission. Do not let users have ALL = (ALL) ALL.
+	* $ visudo
+* Check running processes.
+	* $ ps aux
+	* $ top
+* Check running services.
+	* $ ss -tulpn
+* Update and upgrade
+	* yum -y update
+	* reboot
+* Continually check for users on machine
+	* who
 ## Extras
 Check for shells
 ```
