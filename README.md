@@ -34,7 +34,9 @@ If you edit config files do not forget to restart the service
 ### pfSense
 ### VSFTPd
 #### Installation
-* sudo apt-get install vsftpd.
+* sudo apt-get install vsftpd
+* Restart, start, or stop vsftpd
+	* /etc/init.d/vsftpd [restart | stop | start]
 #### Config File
 * Location is /etc/vsftpd.conf 
 * Back up config file
@@ -44,7 +46,8 @@ If you edit config files do not forget to restart the service
 ### OpenSSH
 #### Installation
 * sudo apt-get install openssh-server openssh-client
-
+* Restart, start, or stop ssh
+	* /etc/init.d/ssh [restart | stop | start]
 #### Config File
 * Config Location /etc/ssh/sshd_config
 * Back up config file
@@ -58,18 +61,17 @@ If you edit config files do not forget to restart the service
 * User public/private keys for auth
 	* put pubkey in ~/.ssh/authorized_keys
 	* PasswordAuthentication no
-
 ### Apache
 #### Installation
 * sudo apt-get install apache2
+* Restart, start, or stop apache2
+	* /etc/init.d/apache2 [restart | stop | start]
 #### Config File
 * Configuration file is found in /etc/apache2/apache2.conf
 * Back up config file
 	* sudo mv -v /etc/apache2/apache2.conf /etc/apache2/apache2.conf.bk
 * Add "ServerTokens Prod" to remove version information
 * Add "ServerSignature Off" to change header
-* Restart, start, or stop apache2
-	* /etc/init.d/apache2 [restart | stop | start]
 * To restric directory browsing
 	*/etc/apache2/apache2.conf
  ``` 
@@ -80,10 +82,12 @@ Options None
 AllowOverride None
 </Directory> 
 ```
-### MySQL and MongoDB
+### MySQL
 #### Installation
 * sudo apt-get install mysql-server
 * sudo mysql_secure_installation
+* Restart, start, or stop mysql
+	* /etc/init.d/mysql [restart | stop | start]
 
 #### Reset MySQL Root Password
 * sudo /etc/init.d/mysql stop
