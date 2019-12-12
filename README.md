@@ -32,11 +32,11 @@ Check for shells
 ```
 $ grep exec * -R
 ```
-
+## Services
 ### pfSense
 ### VSFTPd
 
-## OpenSSH
+### OpenSSH
 * sudo apt-get install openssh-server openssh-client
 
 * etc/ssh/sshd_config
@@ -66,15 +66,12 @@ Options None
 AllowOverride None
 </Directory> 
 ```
- ### Nginx
- * /etc/nginx/nginx.conf
-* Audit the server
-  * sudo apt-get install wapiti
-	* wapiti http://example.org -n 10 -b
+### Nginx
+* /etc/nginx/nginx.conf
   
-## Postfix, Dovecot, and Bind9
+### Postfix, Dovecot, and Bind9
 
-## MySQL and MongoDB
+### MySQL and MongoDB
 #### Installation
 * sudo apt-get install mysql-server
 * sudo mysql_secure_installation
