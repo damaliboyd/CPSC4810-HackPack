@@ -22,6 +22,8 @@
 	* $ top
 * Check running services.
 	* $ ss -tulpn
+* Make bakeup of services
+	* sudo mv -v /etc/service.conf /etc/service.conf.bk
 * Update and upgrade
 	* yum -y update
 	* reboot
@@ -32,16 +34,20 @@
 ### VSFTPd
 #### Installation
 * sudo apt-get install vsftpd.
-####
-* /etc/vsftpd.conf 
+#### Config File
+* Location is /etc/vsftpd.conf 
+Back up config file
+	* sudo mv -v /etc/vsftpd.conf /etc/vsftpd.conf.bk
 ### OpenSSH
 #### Installation
 * sudo apt-get install openssh-server openssh-client
 
 #### Config File
-* etc/ssh/sshd_config
+* Config Location /etc/ssh/sshd_config
+* Back up config file
+	* sudo mv -v /etc/ssh/sshd_config /etc/ssh/sshd_config.bk
 * Deny root login
-	* etc/ssh/sshd_config
+	* /etc/ssh/sshd_config
 	* PermitRootLogin no
 * Limit user login
 	* /etc/ssh/sshd_config
@@ -55,6 +61,8 @@
 * sudo apt-get install apache2
 #### Config File
 * Configuration file is found in /etc/apache2/apache2.conf
+* Back up config file
+	* sudo mv -v /etc/apache2/apache2.conf /etc/apache2/apache2.conf.bk
 * Add "ServerTokens Prod" to remove version information
 * Add "ServerSignature Off" to change header
 * Restart, start, or stop apache2
