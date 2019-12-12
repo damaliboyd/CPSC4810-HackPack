@@ -3,44 +3,44 @@
 * Change the root password.
 	* $ `passwd root`
 * Check /etc/passwd to see users. 
-	* $ cat /etc/passwd
+	* $ `cat /etc/passwd`
 * Change passwords of other users with login.
-	* $ `passwd username
+	* $ `passwd username`
 * Delete unneeded users
-	* $ `userdel usernmae
+	* $ `userdel username`
 * Check /etc/group and /etc/shadow.
-	* $ `cat /etc/group and cat /etc/shadow
+	* $ `cat /etc/group and cat /etc/shadow`
 * Check what's in the crontab and edit it.
-	* $ crontab -l
-	* $ crontab -e
+	* $ `crontab -l`
+	* $ `crontab -e`
 * Check /tmp for suspicious files.
-	* $ ls -la /tmp
+	* $ `ls -la /tmp`
 * Check people with sudo permission. Do not let users have ALL = (ALL) ALL.
-	* $ visudo
+	* $ `visudo`
 * Check running processes.
-	* $ ps aux
-	* $ top
+	* $ `ps aux`
+	* $ `top`
 * Check running services.
-	* $ ss -tulpn
+	* $ `ss -tulpn`
 * Make bakeup of services
-	* sudo mv -v /etc/service.conf /etc/service.conf.bk
+	* `sudo mv -v /etc/service.conf /etc/service.conf.bk`
 * Update and upgrade
-	* yum -y update
-	* reboot
+	* $ `yum -y update`
+	* $ `reboot`
 * Continually check for users on machine
-	* who
+	* $ `who`
 ## Services
 If you edit config files do not forget to restart the service 
 ### pfSense
 ### VSFTPd
 #### Installation
-* sudo apt-get install vsftpd
+* $ `sudo apt-get install vsftpd`
 * Restart, start, or stop vsftpd
 	* /etc/init.d/vsftpd [restart | stop | start]
 #### Config File
 * Location is /etc/vsftpd.conf 
 * Back up config file
-	* sudo mv -v /etc/vsftpd.conf /etc/vsftpd.conf.bk
+	* $ `sudo mv -v /etc/vsftpd.conf /etc/vsftpd.conf.bk`
 * Add following to config file to reduce ftp privileges
 	* nopriv_user=ftp
 ### OpenSSH
@@ -51,7 +51,7 @@ If you edit config files do not forget to restart the service
 #### Config File
 * Config Location /etc/ssh/sshd_config
 * Back up config file
-	* sudo mv -v /etc/ssh/sshd_config /etc/ssh/sshd_config.bk
+	* $ `sudo mv -v /etc/ssh/sshd_config /etc/ssh/sshd_config.bk`
 * Deny root login
 	* /etc/ssh/sshd_config
 	* PermitRootLogin no
@@ -69,7 +69,7 @@ If you edit config files do not forget to restart the service
 #### Config File
 * Configuration file is found in /etc/apache2/apache2.conf
 * Back up config file
-	* sudo mv -v /etc/apache2/apache2.conf /etc/apache2/apache2.conf.bk
+	* $ `sudo mv -v /etc/apache2/apache2.conf /etc/apache2/apache2.conf.bk`
 * Add "ServerTokens Prod" to remove version information
 * Add "ServerSignature Off" to change header
 * To restric directory browsing
@@ -87,7 +87,7 @@ AllowOverride None
 * sudo apt-get install mysql-server
 * sudo mysql_secure_installation
 * Restart, start, or stop mysql
-	* `/etc/init.d/mysql [restart | stop | start]`
+	* $ `/etc/init.d/mysql` [restart | stop | start]
 
 #### Reset MySQL Root Password
 * sudo /etc/init.d/mysql stop
@@ -98,12 +98,11 @@ AllowOverride None
 * UPDATE mysql.user SET Password=PASSWORD('newpwd') WHERE User='root';
 
 #### Create backup of MySQL Database
-* `mysqldump -u USER -p --all-databases > /mnt/backups/all_databases.sql`
+* $ `mysqldump -u USER -p --all-databases > /mnt/backups/all_databases.sql`
 
 ### AD/DS
 
 ## Extras
-Check for shells
-```
-$ grep exec * -R
-```
+* Check for shells
+	* $ `grep exec * -R`
+
