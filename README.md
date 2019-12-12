@@ -30,12 +30,15 @@
 ## Services
 ### pfSense
 ### VSFTPd
-
+#### Installation
+* sudo apt-get install vsftpd.
+####
+* /etc/vsftpd.conf 
 ### OpenSSH
 #### Installation
 * sudo apt-get install openssh-server openssh-client
 
-#### Edit Config File
+#### Config File
 * etc/ssh/sshd_config
 * Deny root login
 	* etc/ssh/sshd_config
