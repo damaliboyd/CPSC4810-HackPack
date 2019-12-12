@@ -27,18 +27,15 @@
 	* reboot
 * Continually check for users on machine
 	* who
-## Extras
-Check for shells
-```
-$ grep exec * -R
-```
 ## Services
 ### pfSense
 ### VSFTPd
 
 ### OpenSSH
+#### Installation
 * sudo apt-get install openssh-server openssh-client
 
+#### Edit Config File
 * etc/ssh/sshd_config
 * Deny root login
 	* etc/ssh/sshd_config
@@ -66,16 +63,11 @@ Options None
 AllowOverride None
 </Directory> 
 ```
-### Nginx
-* /etc/nginx/nginx.conf
-  
-### Postfix, Dovecot, and Bind9
-
 ### MySQL and MongoDB
 #### Installation
 * sudo apt-get install mysql-server
 * sudo mysql_secure_installation
-#### Commands
+
 #### Reset MySQL Root Password
 * sudo /etc/init.d/mysql stop
 * sudo /usr/sbin/mysqld --skip-grant-tables --skip-networking &
@@ -87,5 +79,10 @@ AllowOverride None
 #### Create backup of MySQL Database
 15 2 * * * root mysqldump -u root -pPASSWORD --all-databases | gzip > /mnt/disk2/database_'data ' %m-%d-%y' ' .sql.gz
 
-## AD/DS and AD DNS
+### AD/DS and AD DNS
 
+## Extras
+Check for shells
+```
+$ grep exec * -R
+```
