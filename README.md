@@ -79,7 +79,7 @@ AllowOverride None
 #### Create backup of MySQL Database
 15 2 * * * root mysqldump -u root -pPASSWORD --all-databases | gzip > /mnt/disk2/database_'data ' %m-%d-%y' ' .sql.gz
 
-### AD/DS and AD DNS
+### AD/DS
 
 ## Extras
 Check for shells
