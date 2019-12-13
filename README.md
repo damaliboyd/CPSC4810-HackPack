@@ -23,7 +23,8 @@
 * Check running services.
 	* $ `ss -tulpn`
 * Make bakeup of services
-	* `sudo mv -v /etc/service.conf /etc/service.conf.bk`
+	* $ `mkdir backup`
+	* `sudo mv -v /etc/service.conf /backup/service.conf.bk`
 * Update and upgrade
 	* $ `yum -y update`
 	* $ `reboot`
@@ -40,7 +41,7 @@ If you edit config files do not forget to restart the service
 #### Config File
 * Location is /etc/vsftpd.conf 
 * Back up config file
-	* $ `sudo mv -v /etc/vsftpd.conf /etc/vsftpd.conf.bk`
+	* $ `sudo cp /etc/vsftpd.conf /backup/vsftpd.conf.bk`
 * Add following to config file to reduce ftp privileges
 	* nopriv_user=ftp
 ### OpenSSH
@@ -51,7 +52,7 @@ If you edit config files do not forget to restart the service
 #### Config File
 * Config Location /etc/ssh/sshd_config
 * Back up config file
-	* $ `sudo mv -v /etc/ssh/sshd_config /etc/ssh/sshd_config.bk`
+	* $ `sudo cp  /etc/ssh/sshd_config /backup/sshd_config.bk`
 * Deny root login
 	* /etc/ssh/sshd_config
 	* PermitRootLogin no
@@ -69,7 +70,7 @@ If you edit config files do not forget to restart the service
 #### Config File
 * Configuration file is found in /etc/apache2/apache2.conf
 * Back up config file
-	* $ `sudo mv -v /etc/apache2/apache2.conf /etc/apache2/apache2.conf.bk`
+	* $ `sudo cp /etc/apache2/apache2.conf /backup/apache2.conf.bk`
 * Add "ServerTokens Prod" to remove version information
 * Add "ServerSignature Off" to change header
 * To restric directory browsing
@@ -82,6 +83,8 @@ Options None
 AllowOverride None
 </Directory> 
 ```
+#### Backup Server
+
 ### MySQL
 #### Installation
 * sudo apt-get install mysql-server
@@ -98,7 +101,7 @@ AllowOverride None
 * UPDATE mysql.user SET Password=PASSWORD('newpwd') WHERE User='root';
 
 #### Create backup of MySQL Database
-* $ `mysqldump -u USER -p --all-databases > /tmp/backups/all_databases.sql`
+* $ `mysqldump -u USER -p --all-databases > /backup/all_databases.sql`
 
 ### AD/DS
 
