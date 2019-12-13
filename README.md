@@ -116,6 +116,18 @@ AllowOverride None
 
 ### AD/DS
 
+## WINDOWS
+* Add user: `net user <username> <password> /ADD`
+* Change password: `net user <username> *`
+* See who is logged on: `query user`, use `logoff <ID>` to kick them off
+* Disable an account: `net user <username> /active:no`
+* Check services: `services.msc`
+* Users and Groups: `lusrmgr.msc`
+* Security Policies: `secpol.msc`
+* Add network rule: `netsh advfirewall add rule=”<name>” dir=[in | out] action=allow protocol=[TCP | UDP] localport=<port>`
+* Look at listening/open ports: `netstat -an`
+
+
 ## Extras
 * Check for shells
 	* $ `grep exec * -R`
