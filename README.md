@@ -42,6 +42,14 @@ If you edit config files do not forget to restart the service
 * Location is /etc/vsftpd.conf 
 * Back up config file
 	* $ `sudo cp /etc/vsftpd.conf /backup/vsftpd.conf.bk`
+* Disable anon users, allow local users, allow users to upload files
+	* anonymous_enaable=NO
+	* local_enable=YES
+	* write_enable=YES
+* Limit ftp users to directory.
+	* userlist_enable=YES
+	* userlist_file=/etc/vsftpd/user_list
+	* userlist_deny=NO (Setting this to yes makes user_list a list of blocked users)
 * Add following to config file to reduce ftp privileges
 	* nopriv_user=ftp
 ### OpenSSH
