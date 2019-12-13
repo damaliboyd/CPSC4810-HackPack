@@ -70,6 +70,9 @@ If you edit config files do not forget to restart the service
 * User public/private keys for auth
 	* put pubkey in ~/.ssh/authorized_keys
 	* PasswordAuthentication no
+#### Kicking an active user off
+* Find process ID using `ps -a | grep ssh`
+* `kill [pid]`
 ### Apache
 #### Installation
 * sudo apt-get install apache2
