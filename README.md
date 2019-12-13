@@ -32,7 +32,6 @@
 	* $ `who`
 ## Services
 If you edit config files do not forget to restart the service 
-### pfSense
 ### VSFTPd
 #### Installation
 * $ `sudo apt-get install vsftpd`
