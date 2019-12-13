@@ -84,6 +84,7 @@ AllowOverride None
 </Directory> 
 ```
 #### Backup Server
+* $ `sudo cp /var/www/ /backup/var`
 
 ### MySQL
 #### Installation
