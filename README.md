@@ -24,7 +24,7 @@
 	* $ `ss -tulpn`
 * Make bakeup of services
 	* $ `mkdir backup`
-	* `sudo mv -v /etc/service.conf /backup/service.conf.bk`
+	* $ `sudo mv -v /etc/service.conf /backup/service.conf.bk`
 * Update and upgrade
 	* $ `yum -y update`
 	* $ `reboot`
