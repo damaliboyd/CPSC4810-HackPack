@@ -47,7 +47,7 @@ If you edit config files do not forget to restart the service
 #### Installation
 * sudo apt-get install openssh-server openssh-client
 * Restart, start, or stop ssh
-	* /etc/init.d/ssh [restart | stop | start]
+	* `/etc/init.d/ssh [restart | stop | start]`
 #### Config File
 * Config Location /etc/ssh/sshd_config
 * Back up config file
@@ -65,7 +65,7 @@ If you edit config files do not forget to restart the service
 #### Installation
 * sudo apt-get install apache2
 * Restart, start, or stop apache2
-	* /etc/init.d/apache2 [restart | stop | start]
+	* `/etc/init.d/apache2 [restart | stop | start]`
 #### Config File
 * Configuration file is found in /etc/apache2/apache2.conf
 * Back up config file
@@ -87,7 +87,7 @@ AllowOverride None
 * sudo apt-get install mysql-server
 * sudo mysql_secure_installation
 * Restart, start, or stop mysql
-	* $ `/etc/init.d/mysql` [restart | stop | start]
+	* $ `/etc/init.d/mysql [restart | stop | start]`
 
 #### Reset MySQL Root Password
 * sudo /etc/init.d/mysql stop
@@ -98,11 +98,15 @@ AllowOverride None
 * UPDATE mysql.user SET Password=PASSWORD('newpwd') WHERE User='root';
 
 #### Create backup of MySQL Database
-* $ `mysqldump -u USER -p --all-databases > /mnt/backups/all_databases.sql`
+* $ `mysqldump -u USER -p --all-databases > /tmp/backups/all_databases.sql`
 
 ### AD/DS
 
 ## Extras
 * Check for shells
 	* $ `grep exec * -R`
+* Check File attribute
+	* $ `lsattr filename`
+* Change File Attribute
+	* $ `chattr [+/-/=] [attribute] filename`
 
